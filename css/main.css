@@ -1,4 +1,28 @@
 
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+    .desc{
+        font-size: 0.888em;
+    }
+    .ssource{
+        font-size: 0.8em; padding-top: 0.6em;float: left;
+    }
+    .sdest{
+        font-size: 0.8em; padding-top: 1.4em;float: left;
+    }
+    .sqd{
+        font-size: 0.8em; padding-top: 1.4em;float: left; 
+    }
+}
+
+.ssource{
+    font-size: 1.1em; padding-top: 0.6em;float: left;
+}
+.sdest{
+    font-size: 1.1em; padding-top: 1.4em;float: left;
+}
+.sqd{
+   font-size: 1.1em; padding-top: 1.4em;float: left; 
+}
 
 body::-webkit-scrollbar {
     width: 10px;
@@ -363,4 +387,5 @@ button:focus,.btn-outline-primary:focus {
 
 .desc, .copyright{
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
 }
