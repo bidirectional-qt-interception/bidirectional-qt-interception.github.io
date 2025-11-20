@@ -1,21 +1,22 @@
-@media screen and (min-width: 1535px) {
-    .desc{
-        font-size: 0.893em;
-    }
-    .ssource{
-        font-size: 0.8em;
-    }
-    .sdest{
-        font-size: 0.8em;
-    }
-    .sqd{
-        font-size: 0.8em;
-    }
-    #calculate{
-        margin-top: 0.2em;
-    }
+/* Styles par défaut (inférieurs à 1536px) */
+.desc{
+    font-size: 0.893em;
 }
-@media screen and (min-width: 2750px) {
+.ssource{
+    font-size: 0.8em;
+}
+.sdest{
+    font-size: 0.8em;
+}
+.sqd{
+    font-size: 0.8em;
+}
+#calculate{
+    margin-top: 0.2em;
+}
+
+/* Surcharge pour les écrans > 1535px */
+@media screen and (min-width: 1537px) {
     .desc{
         font-size: 1em;
     }
@@ -32,13 +33,6 @@
         margin-top: 1.17em;
     }
 }
-
-
-
-
-
-
-
 
 body::-webkit-scrollbar {
     width: 10px;
@@ -400,3 +394,4 @@ button:focus,.btn-outline-primary:focus {
     color: #97b7e1;
     padding-top: 1.5em;
 }
+
