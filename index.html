@@ -1,1 +1,105 @@
-<h11>It's Work !</h11>
+
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+    <head><meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="generator" content="">
+        <title>Bidirectionnal QT Interception</title>
+        <link href="css/css2.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+        <script src="js/plotly-3.3.0.min.js" charset="utf-8"></script>
+        <link rel="icon" href="Assets/favicon.ico">
+        <meta name="theme-color" content="#712cf9"> 
+        <link href="css/main.css" rel="stylesheet">
+    </head> 
+    <body> 
+        <div class="background-wrapper"><div class="background-container"></div></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> 
+            <symbol id="check2" viewBox="0 0 16 16"> <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path> </symbol> 
+            <symbol id="circle-half" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path></symbol> 
+            <symbol id="moon-stars-fill" viewBox="0 0 16 16"> <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path> <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path> </symbol> 
+            <symbol id="sun-fill" viewBox="0 0 16 16"> <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path> </symbol> 
+        </svg> 
+        <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle" style="z-index: 0;">
+            <span class="copyright">Silicium & Sigmoon © 2026</span>
+        </div>  
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> 
+            <symbol id="check" viewBox="0 0 16 16"> 
+                <title>Check</title> 
+                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path> 
+            </symbol> 
+        </svg> 
+        <div class="container py-3"> 
+            <header> 
+                <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom"> 
+                    <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none" style="text-shadow: 3px 3px 5px black;"> 
+                        <i class="bi bi-shield-slash" style="color:white;font-size:4.5em;"></i>
+                        <span class="fs-4 title">Bidirectional QT Interception</span> 
+                    </a> 
+                </div>
+            </header> 
+            <main> 
+                <div class="row row-cols-2 row-cols-md-2 mb-4 text-center"> 
+                    <div class="col-3 col-md-3"> 
+                        <div class="card mb-4 rounded-3 shadow-sm border-primary"> 
+                            <div class="card-header py-3 border-primary"> 
+                                <h4 class="my-0 fw-normal"><i class="bi bi-wrench-adjustable-circle" style="font-size: 1.4em;"></i> Parameters</h4> 
+                            </div> 
+                            <div class="card-body"> 
+                                <div id="dd-source" class="dropdown">
+                                    <span style="font-size: 1.1em; padding-top: 0.6em;float: left;">Source</span>
+                                    <button id="source" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+                                </div>
+                                <div id="dd-dest" class="dropdown">
+                                    <span style="font-size: 1.1em; padding-top: 1.4em;float: left;">Destination</span>
+                                    <button id="dest" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+                                </div> 
+                                <div id="dd-qd" class="dropdown">
+                                    <span style="font-size: 1.1em; padding-top: 1.4em;float: left;">Quantum Drive</span>
+                                    <button id="qd" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+                                </div>                                                                                           
+                            </div> 
+                            <div class="desc">
+                                This tool calculates the quantum travel intersection point between the OM of one celestial body and the center of another. Specify the source, destination, and model of the Mantis quantum drive (size 1), and the tool will calculate the required distance (Gm) and time travel (sec) to the intersection point. Using voiceattack, you can create some actions related to the travel time to stop the ship.
+                            </div>
+                            <div class="mt-auto p-3">
+                                <button id="calculate" type="button" class="w-100 btn btn-lg btn-outline-primary">CALCULATE</button> 
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="col-9 col-md-9">
+                        <div class="card card-result mb-4 rounded-3 shadow-sm border-primary"> 
+                                <div class="card-header py-3 border-primary"> 
+                                    <h4 class="my-0 fw-normal"><i class="bi bi-bootstrap-reboot" style="font-size: 1.4em;"></i>esult</h4> 
+                                </div> 
+                                <div class="card-body"> 
+                                    <div id="gd"></div>
+                                </div> 
+                            </div> 
+                        </div>                   
+                </div>  
+                             
+            </main>
+            <main></main>
+        </div>        
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/Bodies.js"></script> 
+        <script src="./js/QTtravel.js"></script> 
+        <script src="./js/main.js"></script>  
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
