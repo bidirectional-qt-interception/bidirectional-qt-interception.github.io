@@ -1,5 +1,5 @@
 
-@media screen and (min-width: 1920px) and (min-height: 1080px) {
+@media screen and (min-width: 1536px) {
     .desc{
         font-size: 0.888em;
     }
@@ -389,3 +389,4 @@ button:focus,.btn-outline-primary:focus {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 }
+
