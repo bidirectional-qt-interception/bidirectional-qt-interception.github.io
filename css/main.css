@@ -3,13 +3,16 @@
         font-size: 0.893em;
     }
     .ssource{
-        font-size: 0.8em; padding-top: 1em;float: left;
+        font-size: 0.8em;
     }
     .sdest{
-        font-size: 0.8em; padding-top: 2.6em;float: left;
+        font-size: 0.8em;
     }
     .sqd{
-        font-size: 0.8em; padding-top: 2.6em;float: left; 
+        font-size: 0.8em;
+    }
+    #calculate{
+        margin-top: 0.2em;
     }
 }
 @media screen and (min-width: 2750px) {
@@ -17,16 +20,24 @@
         font-size: 1em;
     }
     .ssource{
-        font-size: 1.1em; padding-top: 0.6em;float: left;
+        font-size: 1.1em;
     }
     .sdest{
-        font-size: 1.1em; padding-top: 1.4em;float: left;
+        font-size: 1.1em;
     }
     .sqd{
-        font-size: 1.1em; padding-top: 1.4em;float: left; 
+        font-size: 1.1em;
+    }    
+    #calculate{
+        margin-top: 1.17em;
     }
-
 }
+
+
+
+
+
+
 
 
 body::-webkit-scrollbar {
@@ -309,12 +320,10 @@ button:focus,.btn-outline-primary:focus {
 }
 
 #source,#dest,#qd{
-    width: 69%;
+    width: 100%;
     float: right;
 }
-#dest,#qd{
-    margin-top: 0.5em;
-}
+
 
 .dropdown-menu {
     position: absolute;
@@ -349,7 +358,7 @@ button:focus,.btn-outline-primary:focus {
 
 .dropdown-menu.show {
     display: block;
-    width: 69%;
+        width: 117%;
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
@@ -376,15 +385,7 @@ button:focus,.btn-outline-primary:focus {
     box-shadow: 0 0 0 .25rem rgb(93 123 188 / 31%);
 }
 
-#calculate{
-    margin-top: 1em;
-}
 
-.desc{
-    text-align: left;
-    padding: 1em;
-    color: #97b7e1;
-}
 
 .copyright{
     color:#394670;
@@ -392,7 +393,10 @@ button:focus,.btn-outline-primary:focus {
 
 .desc, .copyright{
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
 }
 
-
+.desc{
+    text-align: left;
+    color: #97b7e1;
+    padding-top: 1.5em;
+}
