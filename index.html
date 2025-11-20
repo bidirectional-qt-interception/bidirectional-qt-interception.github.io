@@ -44,33 +44,56 @@
             <main> 
                 <div class="row row-cols-2 row-cols-md-2 mb-4 text-center"> 
                     <div class="col-3 col-md-3"> 
-                        <div class="card mb-4 rounded-3 shadow-sm border-primary"> 
+                        <div class="card mb-4 rounded-3 shadow-sm border-primary" style="max-height: 35.4em;"> 
                             <div class="card-header py-3 border-primary"> 
                                 <h4 class="my-0 fw-normal"><i class="bi bi-wrench-adjustable-circle" style="font-size: 1.4em;"></i> Parameters</h4> 
                             </div> 
                             <div class="card-body"> 
-                                <div id="dd-source" class="dropdown">
-                                    <span class="ssource">Source</span>
-                                    <button id="source" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+                                
+                                <div class="row row-cols-2 row-cols-md-2 mb-3"> 
+                                    <div class="col-4 col-md-4 d-flex align-items-center text-start"> 
+                                        <span class="ssource">Source</span>
+                                    </div>
+                                    <div class="col-8 col-md-8"> 
+                                        <div id="dd-source" class="dropdown">                                    
+                                            <button id="source" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div id="dd-dest" class="dropdown">
-                                    <span class="sdest">Destination</span>
-                                    <button id="dest" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
-                                </div> 
-                                <div id="dd-qd" class="dropdown">
-                                    <span class="sqd">Quantum Drive</span>
-                                    <button id="qd" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
-                                </div>                                                                                           
-                            </div> 
-                            <div class="desc">
-                                This tool calculates the quantum travel intersection point between the OM of one celestial body and the center of another. Specify the source, destination, and model of the Mantis quantum drive (size 1), and the tool will calculate the required distance (Gm) and time travel (sec) to the intersection point. Using voiceattack, you can create some actions related to the travel time to stop the ship.
-                            </div>
-                            <div class="mt-auto p-3">
-                                <button id="calculate" type="button" class="w-100 btn btn-lg btn-outline-primary">CALCULATE</button> 
-                            </div>
+
+                                <div class="row row-cols-2 row-cols-md-2 mb-3"> 
+                                    <div class="col-4 col-md-4 d-flex align-items-center text-start"> 
+                                        <span class="sdest mb-0">Destination</span>
+                                    </div>
+                                    <div class="col-8 col-md-8"> 
+                                        <div id="dd-dest" class="dropdown">                                    
+                                            <button id="dest" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row row-cols-2 row-cols-md-2 mb-3"> 
+                                    <div class="col-4 col-md-4 d-flex align-items-center text-start"> 
+                                        <span class="sqd mb-0">Quantum Drive</span>
+                                    </div>
+                                    <div class="col-8 col-md-8"> 
+                                        <div id="dd-qd" class="dropdown">                                    
+                                            <button id="qd" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <p class="card-text desc">
+                                    This tool calculates the quantum travel intersection point between the OM of one celestial body and the center of another. Specify the source, destination, and model of the Mantis quantum drive (size 1), and the tool will calculate the required distance (Gm) and time travel (sec) to the intersection point. Using voiceattack, you can create some actions related to the travel time to stop the ship.
+                                </p>   
+                                <div class="mt-auto">
+                                    <button id="calculate" type="button" class="w-100 btn btn-lg btn-outline-primary">CALCULATE</button> 
+                                </div>                                                                                        
+                            </div>                                                        
                         </div>
                     </div>  
                     <div class="col-9 col-md-9">
@@ -89,13 +112,12 @@
             <main></main>
         </div>        
         <script src="./js/bootstrap.bundle.min.js"></script>
-        <script src="./js/oBodies.js"></script> 
-        <script src="./js/oQTtravel.js"></script> 
-        <script src="./js/omain.js"></script>  
+        <script src="./js/Bodies.js"></script> 
+        <script src="./js/QTtravel.js"></script> 
+        <script src="./js/main.js"></script>  
     </body>
     
 </html>
-
 
 
 
