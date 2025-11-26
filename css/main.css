@@ -485,3 +485,29 @@ button:focus,.btn-outline-primary:focus {
     font-size: 0.7em;
 }
 
+.scrollable-dropdown::-webkit-scrollbar {
+  width: 8px; /* largeur de la scrollbar */
+}
+
+.scrollable-dropdown::-webkit-scrollbar-track {
+  background: #000000; /* couleur de fond */
+}
+
+.scrollable-dropdown::-webkit-scrollbar-thumb {
+  background-color: #005091; /* couleur de la poignée */
+  border-radius: 4px;
+}
+
+.scrollable-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #555; /* couleur au survol */
+}
+
+
+.scrollable-dropdown {
+  max-height: 280px; /* hauteur maximale visible */
+  overflow-y: auto;  /* active le scroll vertical */
+  scrollbar-width: thin; /* "auto", "thin", ou "none" */
+  scrollbar-color: #888 #000000; /* poignée / fond */
+}
+
+
