@@ -1,13 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="fr" data-bs-theme="dark">
-    <head>
-        <meta charset="utf-8">
+    <head><meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Silicium">
         <meta property="og:title" content="Bidirectional QT Interception" />
-        <meta property="og:description" content="This tool calculates the quantum travel intersection point between...  Silicium & Sigmoon © 2026" />
+        <meta property="og:description" content="This tool calculates the quantum travel intersection point between... Silicium & Sigmoon © 2026" />
         <meta property="og:url" content="https://bidirectional-qt-interception.github.io" />
         <meta property="og:image" content="https://raw.githubusercontent.com/bidirectional-qt-interception/bidirectional-qt-interception.github.io/refs/heads/main/Assets/preview.png" />
         <meta property="og:type" content="website" />
@@ -137,7 +135,9 @@
                                 <p class="card-text desc" style="padding-top:0;">
                                     These are the most optimal window states. When the stations on the source planet and the destination planet are on opposite sides of the planet, the player will likely pass through OM1 if they are traveling from the station. This is just an indication and does not take into account any player who might travel outside the station.
                                 </p>   
-                                <div class="mt-auto"></div>                                                                                        
+                                <div class="mt-auto">
+                                    <!-- <button id="calculate" type="button" class="w-100 btn btn-lg btn-outline-primary">CALCULATE</button>  -->
+                                </div>                                                                                        
                             </div>                                                        
                         </div>
                     </div>  
@@ -163,8 +163,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <label for="zoom" class="form-label">Zoom <div style="float: right;"><input type="checkbox" id="unlock" class="form-check-input"> <span id="sunlock" class="unlock"><i class="bi bi-unlock2-fill" style="vertical-align: 0.1em;"></i></span></div><input id="zoom" class="form-range" type="range" min="0.000005" max="500" step="0.01" value="0.02"></label>   
-                                        <div id="zoominfo"></div>                                     
+                                        <div class="row row-cols-2 row-cols-md-2 mb-3">
+                                            <div class="col-4 col-md-4 d-flex align-items-center text-start">Zoom</div>
+                                            <div class="col-8 col-md-8" style="text-align: right;">
+                                                <input type="checkbox" id="unlock" class="form-check-input"> <span id="sunlock" class="unlock"><i class="bi bi-lock-fill" style="vertical-align: 0.1em;"></i>
+                                            </div>
+                                        </div>
+                                        <input id="zoom" class="form-range" type="range" min="0.000005" max="500" step="0.01" value="0.018186">
+                                        <div id="zoominfo"></div>  
+                                        <div id="currentinfo"></div> 
+                                        <div id="omsinfo"></div>                         
                                     </div>
                                     
                                     <canvas id="map"></canvas>
@@ -187,10 +195,3 @@
     </body>
     
 </html>
-
-
-
-
-
-
-
