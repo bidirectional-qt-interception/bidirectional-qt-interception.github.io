@@ -511,3 +511,37 @@ button:focus,.btn-outline-primary:focus {
   scrollbar-width: thin; /* "auto", "thin", ou "none" */
   scrollbar-color: #888 #000000; /* poignée / fond */
 }
+
+.nearestom{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+}
+
+.crusader_fg{    
+    color: rgba(255, 192, 203, 0.5);
+}
+.crusader_bg{
+    background: rgba(255, 192, 203, 0.2);
+}
+.hurston_fg{
+    color: rgba(255, 165, 0, 0.5);
+}
+.hurston_bg{
+    background: rgba(255, 165, 0, 0.2);
+}
+.microtech_fg{
+    color: rgba(255, 255, 255, 0.5);
+}
+.microtech_bg{
+    background: rgba(255, 255, 255, 0.2);
+}
+.arccorp_fg{
+    color: rgba(255, 0, 0, 1);
+}
+.arccorp_bg{
+    background: rgba(255, 0, 0, .2);
+}
+
