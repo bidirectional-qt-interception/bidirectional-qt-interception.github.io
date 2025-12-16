@@ -1,0 +1,122 @@
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Wikelo Interception</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <style>
+            body{ background-color: #0E1117; color: white; font-family: Consolas; margin: 0; padding: 0;}
+            table{border: 1px solid gray; border-collapse: collapse; margin: auto; margin-top: 10px; box-shadow: 5px 5px 5px #00000094; border-radius: 10px;}
+            table thead{border: 1px solid #292828; }
+            table thead tr td{border: 1px solid #283857; padding: 5px; background: #65a5fe36; color: #65a5fe;}
+            table tbody tr{border-top: 1px solid #292828;}
+            table tbody tr td{border: 1px solid #2c3857; padding: 5px; }
+            .menu{ left:10;}
+            .top-right{ right:10; max-width: 300px; }
+            .bottom-left{ position: fixed; left:10; bottom: 30; }
+            .menu, .top-right{
+                position: fixed; 
+                top: 10;  
+                background-color: #0a0c1065; 
+                padding: 1em; 
+                border-radius: .5em;
+                border: 2px solid #12151e; opacity: .9;
+            }
+            .custom-select {
+                border: 2px solid #12151e;
+                border-radius: 8px;
+                padding: 5px;
+                background-color: #0c0e13;
+                color: #6177a4;
+                font-weight: bold;
+                height: 2.5em;
+            }
+            .custom-select:focus {
+                border-color: #6610f2;
+                box-shadow: 0 0 5px rgba(102,16,242,0.5);
+            }
+            .form-range::-webkit-slider-thumb {
+                background: #0c0e13;
+                border: 2px solid #2b3247;
+            }
+            .form-range::-moz-range-thumb {
+                background: #0c0e13;
+                border: 2px solid #2b3247;
+            }
+            .form-range::-webkit-slider-runnable-track {
+                height: 8px;
+                background: linear-gradient(to right, #0d6efd, #6f42c1);
+                border-radius: 4px;
+            }
+            .form-range::-moz-range-track {
+                height: 8px;
+                background: linear-gradient(to right, #0d6efd, #6f42c1);
+                border-radius: 4px;
+            }
+            .form-check-input{
+                background-color: #0c0e13;
+                border-color: #6f42c1;               
+            }
+            .form-check-input:checked {               
+                outline: none;
+                accent-color: #b692f9;
+                background-color: #0c0e13;
+                border-color: #6f42c1;
+            }            
+            .form-check-input:focus {
+                outline: none;
+                box-shadow: none;
+                border-color: #6f42c1;
+            }
+            .btn-secondary{
+                background-color: #0c0e1300;
+                border: 1px solid #1b212c;
+            }
+            .ok{color: rgb(61, 244, 183);}
+            .no{color: rgb(255, 77, 77);}
+        </style>
+    </head>
+    <body>
+        <div id="ui" class="menu">
+            <div id="distances"></div>
+        </div>
+        <div class="top-right container">
+            <div class="row">
+                <div class="col">Zoom</div>
+                <div class="col-6">
+                    <input id="zoom" class="form-range" type="range" min="0.000001" max="500" step="0.01" value="0.02">
+                </div>
+                <div class="col">
+                    <input id="unlock" class="form-check-input" type="checkbox"> <i id="icon" class="bi bi-lock"></i>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">Speed</div>
+                <div class="col-6">
+                    <input id="speed" class="form-range" type="range" min="1" max="5000" step="1" value="1">
+                </div>
+                <div class="col"><span id="current_speed">x1</span></div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col">Planet</div>
+                <div class="col-6">
+                    <select id="center" class="form-select form-select-sm custom-select">
+                        <option value="crusader">Crusader</option>
+                        <option value="hurston">Hurston</option>  
+                        <option value="microtech">Microtech</option>
+                    </select>
+                </div>
+                <div class="col"><button class="btn btn-secondary" id="pause"><i id="icon_pause" class="bi bi-pause"></i></button></div>
+            </div>
+        </div>
+        <canvas id="map"></canvas>
+
+        <div class="bottom-left">
+            <button id="bdebug" class="btn btn-secondary" style="color: #6177a4 !important;"><i class="bi bi-app-indicator"></i></button>
+        </div>
+
+    <script src="oWikelo.js"></script>
+</body>
+</html>
